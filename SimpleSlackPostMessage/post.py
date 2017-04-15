@@ -1,11 +1,18 @@
 #! /usr/bin/env python
-#coding: utf-8
+# coding: utf-8
 
 import requests
 import json
 
-class simpleSlackPostMessage():
-    def __init__(self, token="", channel="", text="", username="", icon_url="", icon_emoji=""):
+
+class SimpleSlackPostMessage(object):
+    def __init__(self,
+                 token="",
+                 channel="",
+                 text="",
+                 username="",
+                 icon_url="",
+                 icon_emoji=""):
         with open("settings.json") as f:
             settingsData = json.load(f)
 
@@ -37,7 +44,7 @@ class simpleSlackPostMessage():
         self.text = text
 
     # params for postMessage
-    def setParam(self):
+    def set_param(self):
         if not self.icon_url == "":
             params = {
                 'token': self.token,
@@ -56,15 +63,24 @@ class simpleSlackPostMessage():
             }
         return params
 
-    def slackChatPostMessage(self):
-        params = self.setParam()
-        return self.slackApi('chat.postMessage', params)
+    def SlackChatPostMessage(self):
+        params = self.set_param()
+        return self.request_slack_api('chat.postMessage', params)
 
-    def slackApi(self, method, params):
+    def request_slack_api(self, method, params):
         url = 'http://slack.com/api/' + method
-        
-        return self.postRequest(url, params)
+        return self.post_request(url, params)
 
-    def postRequest(self, url, params):
+    def post_request(self, url, params):
         response = requests.post(url, params=params, verify=True)
         return response
+
+
+class SimpleSlackPostUtil(object):
+    @staticmethod
+    def create_linked_msg(url, text):
+        """
+        @param: url (string)
+        @param: text (string)
+        """
+        return "<%s|%s>" % (url, text)

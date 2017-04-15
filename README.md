@@ -1,4 +1,4 @@
-# simpleSlackPostMessage
+# SimpleSlackPostMessage
 This is simple post message script to slack.
 
 ## Usage
@@ -6,6 +6,10 @@ Modify `settings.json` for your environment. (If you have not get slack's token,
 
 You can post a message only with the following command.
 
-
-  import slack_postMessage
-  slack_postMessage.simpleSlackPostMessage(text=u"test string").slackChatPostMessage()
+```python
+from SimpleSlackPostMessage import SimpleSlackPostMessage, SimpleSlackPostUtil
+url = "https://github.com/turndn/SimpleSlackPostMessage"
+msg = "This is a message."
+text = "%s: %s" % (SimpleSlackPostUtil.create_linked_msg(url, "site"), msg)
+SimpleSlackPostMessage(text=text).SlackChatPostMessage()
+```
