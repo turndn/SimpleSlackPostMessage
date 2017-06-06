@@ -3,6 +3,10 @@ sudo: false
 language: python
 cache: pip
 
+python:
+  - "3.4"
+  - "3.5"
+
 env:
   global:
   - secure: "b1XN8EvPYT/V8HrfdUd4CB9l6pjSGq0WxgmJryfNwopLA8YGCnEfbTePsd8OZgpkBfntKu64AAypYQa6Ek3OZmczCb0ufIthN2j9tbcMdbmJQ4nNBTmDMd2NroEOoU0iy8jsaMCChPAS34u9e+yDqeyPYiiaHvhB/lWsTO+1QMWJ2EiTNCbxgRVXmzvEH9x+vNfGK/24YoW/icy/RVTlSBKZiGSwcSpQtcdlPpvI23mm5bhvWn3DKcCXAoDxyx7C498NSQiBGgYjSBKyKM3IaCx2r9STtfB5Sps7g2j+W3+hIw3C4uIqJsQhTGSS+C5PljLTerGQ3Frr0Je/9VmK5Y/iM+XSO97PmBzBQ/a4uyEKdCbYeOLZRXkJMB0jPSkRJNPz8XCuFMNs/6nWyELMPwk/ginZ056zNCIkSfVBfjXTO6nLq0SCZhYnf3LACzdqB71urhm9qXDrs41laZPsL+owX7A0JNBZlsWnXaUsbP6djanZiXlRnB7C+jj4Aw2ZHd4eavEy4Qdu9wkQFw510GnukXg0vUwp1rROR2RH2f7db229b3QYnlcpnx9r5EBshCRZNtdAE+MyXVQI0GOGOTiX+a587twd0KAUm7QabMlCR96af2vAwq6u9Pr29NGMzF56p9a5CM69zt+aKBesxI1CakGcZRWdMf17zzp4l74="
