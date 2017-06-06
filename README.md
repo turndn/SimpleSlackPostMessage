@@ -1,5 +1,6 @@
 # SimpleSlackPostMessage
 This is simple post message script to slack.
+[![Build Status](https://travis-ci.org/turndn/SimpleSlackPostMessage.svg?branch=master)](https://travis-ci.org/turndn/SimpleSlackPostMessage)
 
 ## Usage
 Modify `settings.json` for your environment. (If you have not get slack's token, you check https://api.slack.com/web)
