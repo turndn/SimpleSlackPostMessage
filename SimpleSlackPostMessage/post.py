@@ -75,6 +75,9 @@ class SimpleSlackPostMessage(object):
         response = requests.post(url, params=params, verify=True)
         return response
 
+    def text_append(self, text):
+        self.text = "{}\n{}".format(self.text, text)
+
 
 class SimpleSlackPostUtil(object):
     @staticmethod
